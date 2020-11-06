@@ -15,5 +15,5 @@ remote_dir = '/home/ec2-user/downloads'
 
 with pysftp.Connection(host=myHostname, username=myUsername, private_key=myPassword, cnopts=cnopts) as sftp:
     print("Connection succesfully stablished ... ")
-    sftp.put(file_path, remote_dir)
-    sftp.close()
+    #sftp.put(file_path, remote_dir)
+    #sftp.close()
