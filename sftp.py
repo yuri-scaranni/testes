@@ -8,12 +8,12 @@ myPassword = "/home/ec2-user/work_space/testes/scaranni_key.pem"
 cnopts = pysftp.CnOpts()
 cnopts.hostkeys = None
 
-file_path = '/home/ec2-user/work_space/testes/texto.txt'
+file_path = '/home/ec2-user/work_space/texto.txt'
 remote_dir = '/home/ec2-user/downloads'
 
 #python3 sftp.py '/home/ec2-user/work_space/texto.txt' '/home/ec2-user/downloads'
 
 with pysftp.Connection(host=myHostname, username=myUsername, private_key=myPassword, cnopts=cnopts) as sftp:
     print("Connection succesfully stablished ... ")
-    #sftp.put(file_path, remote_dir)
-    #sftp.close()
+    sftp.put(file_path, remote_dir)
+    sftp.close()
